@@ -1,0 +1,106 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: rgba(44, 42, 42, 0.726);
+    background-color: #FAF3E0;
+}
+
+a {
+    text-decoration: none;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+}
+
+h1 {
+    text-shadow: -1px -1px rgba(20, 20, 20, 0.753), 1px 1px #333;
+    color: rgba(44, 42, 42, 0.726);
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    font-size: 50px;
+    font-weight: 700;
+}
+
+ul {
+    width: 700px;
+}
+
+li {
+    margin-left: 5px;
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.topic-title:hover{
+    cursor: pointer;
+}
+
+p {
+    line-height: 20px;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+
+.image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.image img {
+    margin-top: 15px;
+    max-width: 100%;
+    max-height: 400px;
+    object-fit: contain;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.171);
+    border-radius: 5px;
+}
+
+/* exemplo botão - clique aqui */
+
+button {
+    width: 180px;
+    text-align: center;
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 25px;
+    cursor: pointer;
+    border: none;
+    color: rgba(44, 42, 42, 0.726);
+    border-radius: 15px;
+    background: #33c5ff;
+    background-image: linear-gradient(to top, #c79081 0%, #dfa579 100%);
+}
+  
+.message {
+    margin-top: 10px;
+    font-size: 20px;
+    color: red;
+}
+
+.example-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+  
+.hidden {
+    display: none;
+}

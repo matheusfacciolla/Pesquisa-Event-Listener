@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POC - Event Listener</title>
+
+    <link href="css/reset.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="imagem/png" href="imagens/img-headphone.ico">
+</head>
+
+<body>
+    <main>
+
+        <h1>
+            Event Listener
+            <ion-icon name="headset-outline"></ion-icon>
+        </h1>
+        <ul>
+            <li data-id="1" class="topic">
+                <h2>
+                    <ion-icon class="topic-title" name="caret-forward-outline"></ion-icon>
+                    O que são eventos de mouse e teclado em JavaScript?
+                </h2>
+                <div class="content hidden">
+                    <p>
+                        Eventos são ações disparadas dentro da janela do navegador anexados a
+                        algum elemento da página web — pode ser um único elemento, um conjunto de elementos, o HTML
+                        carregado na
+                        guia atual, ou toda a janela do navegador. Existem vários tipos diferentes de eventos que podem
+                        vir a
+                        acontecer, como por exemplo:<br><br>
+                        • O usuário clicando ou passando o cursor do mouse sobre um certo elemento.<br>
+                        • O usuário pressionando uma tecla do teclado.<br>
+                        • Uma pagina da web terminando de carregar.<br><br>
+                        Existe uma infinidade de eventos definidos para uso em JavaScript,
+                        cada um deles possui um manipulador de eventos(event handler), que é um bloco de código(por
+                        exemplo uma função) que será
+                        executado quando o evento for disparado.
+                        Quando esse bloco de código é definido para rodar em resposta a um evento que foi
+                        disparado, nós dizemos que estamos registrando um ouvinte de eventos(event listeners).
+                        Os ouvintes escutam o evento acontecendo, e o manipulador é o codigo que roda em resposta a este
+                        determinado evento.
+                    </p>
+                    <div class="image">
+                        <img src="imagens/MDN-mozilla-events-runway.png" alt="exemplo js">
+                        <p>Fonte: MDN Reference</p>
+                    </div>
+                </div>
+            </li>
+            <li data-id="2" class="topic">
+                <h2>
+                    <ion-icon class="topic-title" name="caret-forward-outline"></ion-icon>
+                    O que é um Event Listener e como adicioná-lo via JS?
+                </h2>
+                <div class="content hidden">
+                    <p>
+                        O método JavaScript Event Listener permite configurar funções a serem chamadas quando um evento
+                        especificado acontece, como no exemplo abaixo que a partir do evento clique do usuário no botão
+                        um texto e imagem aparecem na tela e quando clicado novamente desaparecerem.
+                    </p>
+                    <div class="example-button">
+                        <div class="message hidden">
+                            Clique novamente no botão para a mensagem e a imagem desaparecerem!
+                        </div>
+                        <div class="image hidden image-button">
+                            <img src="imagens/exemplo_button_js.png" alt="exemplo js">
+                        </div>
+                        <button>
+                            Clique aqui!
+                        </button>
+                    </div>
+                </div>
+            </li>
+            <li data-id="3" class="topic">
+                <h2>
+                    <ion-icon class="topic-title" name="caret-forward-outline"></ion-icon>
+                    O que é uma função de callback (utilizada no Event Listener)?
+                </h2>
+                <div class="content hidden">
+                    <p>
+                        Trata-se de uma função que é executada quando algum evento acontece ou depois que o
+                        código chega ao estado desejado. Também conhecida como função de retorno, o Callback cria
+                        regras
+                        dentro de outras funções para que sejam utilizadas no futuro.
+                        Esta função é passada como parâmetro e normalmente age de forma assíncrona, ou seja, não é
+                        executado imediatamente. A aplicação
+                        continuará rodando enquanto espera o momento certo da sua execução. Como por exemplo na imagem
+                        abaixo a função anônima só é executada quando o evento click acontece.
+                    </p>
+                    <div class="image">
+                        <img src="imagens/exemplo_button_js.png" alt="exemplo js">
+                    </div>
+                </div>
+            </li>
+            <li data-id="4" class="topic">
+                <h2>
+                    <ion-icon class="topic-title" name="caret-forward-outline"></ion-icon>
+                    Qual a diferença de um Event Listener de atributos HTML (como onclick)?
+                </h2>
+                <div class="content hidden">
+                    <p>
+                        A principal diferença é que com o atributo onclick você consegue registrar apenas uma função
+                        como callback do
+                        evento. Já com o Event Listener, você pode utilizar a quantidade de funções que forem
+                        necessárias e todas
+                        serão ativadas após a ocorrência do evento. Se tornando assim mais indicado a utilização deste
+                        método em
+                        determinadas situações.
+                    </p>
+                </div>
+            </li>
+            <li data-id="5" class="topic">
+                <h2>
+                    <ion-icon class="topic-title" name="caret-forward-outline"></ion-icon>
+                    O que é o objeto Event que é recebido na função de callback?
+                </h2>
+                <div class="content hidden">
+                    <p>
+                        Às vezes, dentro de uma função de manipulador de eventos, você pode ver um parâmetro
+                        especificado
+                        com um nome como event, evt, ou e. Isso é chamado de event object, e é passado
+                        automaticamente para os manipuladores de eventos para fornecer recursos e informações
+                        extras.<br>
+                        A propriedade target do objeto de evento é sempre uma referência ao elemento em que o evento
+                        acabou de ocorrer.<br> e.target é muito útil quando você deseja definir o mesmo manipulador
+                        de eventos em vários elementos e fazer algo com todos eles quando ocorre um evento neles. Como pode ser visto no código abaixo feito para abrir e fechar os textos de cada pergunta.
+                    </p>
+                    <div class="image">
+                        <img src="imagens/exemplo_objectevent.png" alt="exemplo js">
+                    </div>
+                </div>
+            </li>
+            <li data-id="6" class="topic">
+                <h2>
+                    <ion-icon class="topic-title" name="caret-forward-outline"></ion-icon>
+                    O que é Event Bubbling em JS?
+                </h2>
+                <div class="content hidden">
+                    <p>
+                        Quando um evento é acionado em um elemento que possui elementos pai, os navegadores modernos por
+                        padrão não executam exatamente a partir do elemento que foi clicado.
+                        Na verdade eles executam duas fases diferentes — a fase de captura e a fase de bubbling.<br>
+
+                        Na fase de captura o evento começa no ancestral mais externo, analisando se há um manipulador de
+                        eventos registrado nele e executa em caso afirmativo. Em seguida vai descendo por toda a
+                        hierarquia DOM realizando este processo até chegar no elemento em questão (target).<br>
+
+                        Na fase de bubbling, ocorre exatamente o oposto, a partir do elemento (target) até o ancestral
+                        mais
+                        externo. Como podemos ver na imagem de exemplo abaixo:
+                    </p>
+                    <div class="image">
+                        <img src="imagens/event-propagation-illustration.png" alt="exemplo js">
+                        <p>Fonte: Tutorial Republic</p>
+                    </div>
+                </div>
+            </li>
+            <li data-id="7" class="topic">
+                <h2>
+                    <ion-icon class="topic-title" name="caret-forward-outline"></ion-icon>
+                    O que faz a função event.stopPropagation?
+                </h2>
+                <div class="content hidden">
+                    <p>
+                        Para que não ocorra o event Bubbling explicado anteriormente e não seja executado o manipulador
+                        em mais de
+                        um elemento indesejadamente utilizamos o stopPropagation().
+                        O objeto de evento padrão tem uma função disponível chamada stopPropagation(), que quando
+                        utilizada no objeto de evento de um manipulador, faz com que o manipulador seja executado, mas o
+                        evento não borbulha mais acima na cadeia, portanto, mais nenhum manipulador rodará. Neste 
+                        <a href="https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_event_stoppropagation" target="_blank">link</a>
+                        do W3schools pode ser visto um exemplo de como essa função se comporta.
+                    </p>
+                </div>
+            </li>
+            <li data-id="8" class="topic">
+                <h2>
+                    <ion-icon class="topic-title" name="caret-forward-outline"></ion-icon>
+                    Referências bibliográficas
+                </h2>
+                <div class="content hidden">
+                    <p>
+                        <ion-icon name="remove-outline"></ion-icon>
+                        <a href="https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/Building_blocks/Events" target="_blank">Developer
+                            Mozilla</a><br>
+                        <ion-icon name="remove-outline"></ion-icon>
+                        <a href="https://acervolima.com/diferenca-entre-addeventlistener-e-onclick-em-javascript/" target="_blank">Acervo
+                            Lima</a><br>
+                        <ion-icon name="remove-outline"></ion-icon>
+                        <a href="https://desenvolvimentoparaweb.com/miscelanea/eventos-javascript-capturing-bubbling/" target="_blank">Desenvolvimento
+                            para Web<br></a>
+                        <ion-icon name="remove-outline"></ion-icon>
+                        <a
+                            href="https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_event_stoppropagation" target="_blank">W3schools</a><br>
+                        <ion-icon name="remove-outline"></ion-icon>
+                        <a
+                            href="https://cibersistemas.pt/tecnologia/o-metodo-addeventlistener-codigo-de-exemplo-do-javascript-event-listener/" target="_blank">Ciber
+                            Sistemas</a><br>
+                    </p>
+                </div>
+            </li>
+        </ul>
+    </main>
+
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
