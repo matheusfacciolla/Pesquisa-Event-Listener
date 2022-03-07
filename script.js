@@ -9,6 +9,8 @@ button.addEventListener("click", () => {
 
 function toggleContent(e) {
   const item = e.target;
+  console.log("e.target", e.target)
+  console.log("e", e)
   const parent = item.parentNode.parentNode;
   parent.querySelector(".content").classList.toggle("hidden");
   
